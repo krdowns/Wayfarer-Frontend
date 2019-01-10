@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+article {
+    margin: 5px 10px;
+}
