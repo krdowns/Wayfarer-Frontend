@@ -1,0 +1,8 @@
+.post-container {
+    border: 1.5px solid gray;  
+    border-radius:10px;  
+}
+
+.post-image {
+    width: 50%;
+}

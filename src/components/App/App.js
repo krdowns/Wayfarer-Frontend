@@ -12,6 +12,7 @@ import CitiesContainer from '../CitiesContainer/CitiesContainer'
 import SignUpForm from '../SignUpForm/SignUpForm'
 import LogInForm from '../LogInForm/LogInForm'
 import LogOut from '../LogOut/LogOut'
+import ProfilePage from '../ProfilePage/ProfilePage'
 import './App.css'
 
 class App extends Component {
@@ -92,9 +93,7 @@ class App extends Component {
       <div>
         <NavBar isLoggedIn={this.state.isLoggedIn} />
         <div className='body'>
-        <div>
-          <Carousel />
-        </div>
+
           <Switch>
             <Route path='/signup'
               render={(props) => {
@@ -118,16 +117,20 @@ class App extends Component {
               }}
             />
             <Route
-              path='/'
+              path='/CityPage'
               render={() => {
                 return (
-                  <About isLoggedIn={this.state.isLoggedIn} />
+                  <CityPage isLoggedIn={this.state.isLoggedIn} />
                 )
               }}
             />
             <Route
-              path='/CityPage'
-              compenent={CityPage}
+              path='/ProfilePage'
+              render={() => {
+                return (
+                  <ProfilePage isLoggedIn={this.state.isLoggedIn} />
+                )
+              }}
             />
           </Switch>
         </div>
