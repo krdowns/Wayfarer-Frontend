@@ -1,7 +1,27 @@
 .nav {
-    background: black;
+    background-color: black;
+    height: 75px;
+}
+
+.nav-wrapper {
+    width: 100%;
 }
 
 ul {
     list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #ccff00;
+}
+
+.navButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

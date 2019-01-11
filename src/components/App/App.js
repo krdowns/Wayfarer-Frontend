@@ -7,7 +7,8 @@ import {
 import axios from 'axios'
 import About from '../About/About'
 import NavBar from '../NavBar/NavBar'
-// import CitiesContainer from '../CitiesContainer/CitiesContainer'
+import CityPage from '../CityPage/CityPage'
+import CitiesContainer from '../CitiesContainer/CitiesContainer'
 import LogOut from '../LogOut/LogOut'
 import './App.css'
 
@@ -46,6 +47,7 @@ class App extends Component {
       isLoggedIn: false
     })
     localStorage.clear()
+    window.location.href = '/';
   }
 
   handleInput (e) {
@@ -65,6 +67,7 @@ class App extends Component {
           this.setState({
             isLoggedIn: true
           })
+          console.log(response)
       })
       .catch(err => console.log(err))
       
@@ -91,14 +94,11 @@ class App extends Component {
         <NavBar isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} handleSignUp={this.handleSignUp}/>
         <div className='body'>
         <Carousel options={{ fullWidth: true, indicators: true  }} images={[
-          'https://lorempixel.com/800/400/food/1',
-          'https://lorempixel.com/800/400/food/2',
-          'https://lorempixel.com/800/400/food/3',
-          'https://lorempixel.com/800/400/food/4',
-          'https://lorempixel.com/800/400/food/5'
+          '../images/losangeles.jpg',
+          '../images/nyc.jpeg',
+          '../images/Paris.jpg',
+          '../images/SF-Night.jpg'
         ]} />
-        <div>
-        </div>
           <Switch>
             <Route path='/logout'
               render={(props) => {
@@ -114,6 +114,10 @@ class App extends Component {
                   <About isLoggedIn={this.state.isLoggedIn} />
                 )
               }}
+            />
+            <Route
+              path='/CityPage'
+              compenent={CityPage}
             />
           </Switch>
         </div>

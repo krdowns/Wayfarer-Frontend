@@ -1,0 +1,23 @@
+.carousel.carousel-slider{
+    top: 180px;
+  }
+  
+  .carousel .indicators .indicator-item{
+    width: 20px;
+  }
+  
+  #gallery{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  #gallery img{
+    position: relative;
+    top: 250px;
+    width: 85%;
+    margin: 6%;
+    border-radius: 10px;
+    box-shadow: 12px 12px 19px rgba(0,0,0,0.2);
+  }
+  
