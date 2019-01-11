@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './CityPage.css'
 import CityTab from '../CityTab/CityTab'
+import CityDetail from '../CityDetail/CityDetail'
 
 class CityPage extends Component {
   render () {
@@ -12,7 +13,11 @@ class CityPage extends Component {
               <CityTab />
             </div>
           </section>
-
+          <section className="city-detail">
+            <div>
+              <CityDetail />
+            </div>
+          </section>
         </div>
     )
   }

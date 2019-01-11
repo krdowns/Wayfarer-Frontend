@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import './CityDetail.css'
+import './UserPostTab.css'
 
-class CityDetail extends Component {
+class UserPostTab extends Component {
   render () {
     return (
-        <div className="city-detail">
+        <div className="single-city-tab">
           <img className="post-image" src="../images/SF-Night.jpg" alt="SF" />
           <h1>San Francisco</h1>
         </div>
@@ -12,4 +12,4 @@ class CityDetail extends Component {
   }
 }
 
-export default CityDetail
+export default UserPostTab
