@@ -93,8 +93,16 @@ class App extends Component {
       <div>
         <NavBar isLoggedIn={this.state.isLoggedIn} />
         <div className='body'>
-
+        <div>
+        </div>
           <Switch>
+            <Route path='/about' 
+              render={() => {
+                return (
+                  <About isLoggedIn={this.state.isLoggedIn} />
+                )
+              }}
+            />
             <Route path='/signup'
               render={(props) => {
                 return (

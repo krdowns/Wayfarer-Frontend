@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
 import './CityPage.css'
+import CityTab from '../CityTab/CityTab'
 
 class CityPage extends Component {
   render () {
     return (
         <div>
-            <h1>CityPage</h1>
+          <section className="cities-list">
+            <h1>Cities</h1>
+            <div>
+              <CityTab />
+            </div>
+          </section>
+
         </div>
     )
   }
