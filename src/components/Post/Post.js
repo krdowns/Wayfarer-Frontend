@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
-import './Post.css'
+import React, { Component } from 'react';
 
 class Post extends Component {
-  render () {
-    return (
-        <div>
-            <h1>Post</h1>
+    render() {
+      return(
+        <div className='post-page'>
+          <h1>{this.props.title}</h1>
+          <h2>By {this.props.author}</h2>
+          <p>{this.props.body}</p>
         </div>
-    )
+      )
+    }
   }
-}
 
-export default Post
+export default Post;
