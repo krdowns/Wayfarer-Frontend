@@ -1,13 +1,7 @@
 .nav {
-    background-color: black;
-    color: white;
+    background: black;
 }
 
 ul {
     list-style: none;
-}
-
-li {
-    text-decoration: none;
-
 }

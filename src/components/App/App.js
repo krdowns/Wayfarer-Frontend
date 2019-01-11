@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Carousel} from 'react-materialize'
 import {
   Route,
   Switch
@@ -6,9 +7,7 @@ import {
 import axios from 'axios'
 import About from '../About/About'
 import NavBar from '../NavBar/NavBar'
-import CitiesContainer from '../CitiesContainer/CitiesContainer'
-import SignUpForm from '../SignUpForm/SignUpForm'
-import LogInForm from '../LogInForm/LogInForm'
+// import CitiesContainer from '../CitiesContainer/CitiesContainer'
 import LogOut from '../LogOut/LogOut'
 import './App.css'
 
@@ -57,10 +56,10 @@ class App extends Component {
 
   handleSignUp = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/users/signup', 
+    axios.post('http://localhost:3000/users/signup', 
 			{ email: this.state.email,
       	password: this.state.password }
-			)
+      )
       .then( response => {
         localStorage.token = response.data.token
           this.setState({
@@ -68,11 +67,12 @@ class App extends Component {
           })
       })
       .catch(err => console.log(err))
+      
   }
 
   handleLogIn = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/users/login', {
+    axios.post('http://localhost:3000/users/login', {
       email: this.state.email,
       password: this.state.password
     })
@@ -88,27 +88,22 @@ class App extends Component {
   render () {
     return (
       <div>
-        <NavBar isLoggedIn={this.state.isLoggedIn} />
+        <NavBar isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} handleSignUp={this.handleSignUp}/>
         <div className='body'>
+        <Carousel options={{ fullWidth: true, indicators: true  }} images={[
+          'https://lorempixel.com/800/400/food/1',
+          'https://lorempixel.com/800/400/food/2',
+          'https://lorempixel.com/800/400/food/3',
+          'https://lorempixel.com/800/400/food/4',
+          'https://lorempixel.com/800/400/food/5'
+        ]} />
+        <div>
+        </div>
           <Switch>
-            <Route path='/signup'
-              render={(props) => {
-                return (
-                  <SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
-                )
-              }}
-            />
             <Route path='/logout'
               render={(props) => {
                 return (
                   <LogOut isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />
-                )
-              }}
-            />
-            <Route path='/login'
-              render={(props) => {
-                return (
-                  <LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
                 )
               }}
             />
