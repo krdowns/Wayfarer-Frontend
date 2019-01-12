@@ -1,44 +1,37 @@
 import React, {Component} from 'react';
+import {Carousel} from 'react-bootstrap';
 
-class Carousel extends Component {
+class CarouselComp extends Component {
     render() {
         return (
         <section> 
-            <div id="carousel">
-                <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100 hover-shadow" src="images/SF-Night.jpg" alt="First slide"
-                                onclick="openModal();currentSlide(1)" />
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100 hover-shadow" src="images/losangeles.jpg" alt="Second slide"
-                                onclick="openModal();currentSlide(2)" />
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100 hover-shadow" src="images/nyc.jpeg" alt="Third slide"
-                                onclick="openModal();currentSlide(3)" />
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
+              <Carousel>
+                    <Carousel.Item>
+                        <img width={900} height={500} alt="900x500" src="/images/losangeles.jpg" />
+                        <Carousel.Caption>
+                        <h3>First slide label</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img width={900} height={500} alt="900x500" src="/images/nyc.jpg" />
+                        <Carousel.Caption>
+                        <h3>Second slide label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img width={900} height={500} alt="900x500" src="/images/SF-Night.jpg" />
+                        <Carousel.Caption>
+                        <h3>Third slide label</h3>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
         </section>   
 
         );
     }
 }
 
-export default Carousel;
+export default CarouselComp;

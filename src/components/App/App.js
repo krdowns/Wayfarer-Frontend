@@ -6,7 +6,7 @@ import {
 import axios from 'axios'
 import About from '../About/About'
 import NavBar from '../NavBar/NavBar'
-import Carousel from '../Carousel/Carousel'
+import CarouselComp from '../Carousel/Carousel'
 import CitiesContainer from '../CitiesContainer/CitiesContainer'
 import SignUpForm from '../SignUpForm/SignUpForm'
 import LogInForm from '../LogInForm/LogInForm'
@@ -89,10 +89,10 @@ class App extends Component {
   render () {
     return (
       <div>
-        <NavBar isLoggedIn={this.state.isLoggedIn} />
+        <NavBar />
         <div className='body'>
         <div>
-          <Carousel />
+          <CarouselComp />
         </div>
           <Switch>
             <Route path='/signup'

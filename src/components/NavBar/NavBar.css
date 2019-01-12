@@ -1,13 +1,11 @@
-.nav {
+nav {
     background-color: black;
-    height: 60px;
 }
-
-ul {
-    list-style: none;
-}
-
 a {
     text-decoration: none;
     color: white;
+}
+
+li {
+    display: flex;
 }
