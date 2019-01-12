@@ -13,6 +13,7 @@ class ProfilePage extends Component {
               <button className="edit-profile-button">Edit Profile</button>
             </div>
           </section>
+          <section className="dividing-line" />
           <section className="user-post-container">
             <div>
               <UserPosts />
