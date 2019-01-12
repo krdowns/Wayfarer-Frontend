@@ -1,3 +1,21 @@
 body {
     border: 2px solid pink;
 }
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: .75em;
+    margin-top: 5%;
+}
+
+.profile-page-left img {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.user-info p {
+    width: 100%;
+    text-align: center;
+}

@@ -6,14 +6,14 @@ import UserPosts from '../UserPosts/UserPosts'
 class ProfilePage extends Component {
   render () {
     return (
-        <div>
+        <div className="profile-page-main">
           <section className="user-info-tab">
-            <h1>User Info</h1>
             <div>
               <ProfileDetails />
+              <button className="edit-profile-button">Edit Profile</button>
             </div>
           </section>
-          <section className="user-posts">
+          <section className="user-post-container">
             <div>
               <UserPosts />
             </div>

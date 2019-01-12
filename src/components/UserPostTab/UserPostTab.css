@@ -1,24 +1,30 @@
-.single-city-tab {
+.user-posts-tab {
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 3%;
+    margin-bottom: 5%;
+}
+
+.user-posts-tab h3 {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.user-posts-tab img {
+    width: 20%;
+    height: 20%;
+}
+
+.post-snippet {
     display: flex;
     flex-direction: row;
-    border: 1px solid gold;
-    border-radius: 25px;
-    height: 125px;
-    width: 98%;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    padding-top: 5px;
+    text-align: left;
+    margin-top: 1%;
+    padding-bottom: 1%;
+    border-bottom: 2px solid #333;
 }
 
-.single-city-tab img {
-    width: 33%;
-    margin-left: 15px;
-    padding-top: 2px;
-    margin-bottom: 7.5px;
-    border-radius: 25px;
-}
-
-.single-city-tab h1 {
-    margin-top: 33px;
-    margin-left: 60px;
+.post-snippet p {
+    margin-left: 2%;
+    align-self: flex-end;
 }

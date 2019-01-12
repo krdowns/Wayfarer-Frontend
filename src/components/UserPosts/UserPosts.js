@@ -5,8 +5,11 @@ import UserPostTab from '../UserPostTab/UserPostTab'
 class UserPosts extends Component {
   render () {
     return (
-        <div> 
-          <UserPostTab />
+        <div className="user-post-content"> 
+          <h2>Recent Posts</h2>
+          <div>
+            <UserPostTab />
+          </div>
         </div>
     )
   }

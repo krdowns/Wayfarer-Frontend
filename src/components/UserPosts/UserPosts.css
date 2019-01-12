@@ -1,0 +1,9 @@
+body {
+    border: 2px solid blue;
+}
+
+.user-post-content h2 {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

@@ -4,10 +4,14 @@ import './ProfileDetails.css'
 class ProfileDetails extends Component {
   render () {
     return (
+      <div className="profile-page-left">
+        <img className="profile-pic" src="../images/dark-profile-default.jpg" alt="profile-pic" />
         <div className="user-info">
-          <img className="post-image" src="../images/SF-Night.jpg" alt="SF" />
-          <h1>San Francisco</h1>
+          <p>Kenny</p>
+          <p>San Francisco</p>
+          <p>01/10/19</p>
         </div>
+      </div>
     )
   }
 }
