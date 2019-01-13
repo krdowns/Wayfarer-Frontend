@@ -10,7 +10,6 @@ class ProfilePage extends Component {
           <section className="user-info-tab">
             <div>
               <ProfileDetails />
-              <button className="edit-profile-button">Edit Profile</button>
             </div>
           </section>
           <section className="dividing-line" />

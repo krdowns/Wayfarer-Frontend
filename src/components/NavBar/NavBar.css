@@ -5,8 +5,17 @@
     flex-direction: row;
 }
 
+.brand-logo {
+    margin-top: 5px;
+    margin-left: 1%;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 600;
+    transform: skew(-3deg);
+}
+
 .nav-wrapper {
     width: 100%;
+    box-shadow: 0 0px 4px #FFFF00;
 }
 
 ul {
@@ -20,5 +29,6 @@ a {
 }
 
 a:hover {
-    color: gold;
+    color: #FFFF00;
+    text-decoration: none;
 }

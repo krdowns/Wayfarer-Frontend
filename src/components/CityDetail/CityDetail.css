@@ -1,0 +1,29 @@
+.city-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.city-detail-header {
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.city-detail-header h2{
+    width: 125%;
+    font-weight: 400;
+    font-size: 42px;
+}
+
+.city-detail-header h4{
+    margin-top: -11.5%;
+    font-weight: 300;
+}
+
+.city-detail-img {
+    width: 40%;
+    height: 30%;
+    margin-left: 18.5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    filter: grayscale(100%)
+}
