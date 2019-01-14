@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
+import {Carousel} from 'react-materialize'
 
-class Carousel extends Component {
+class Slider extends Component {
     render() {
         return (
-          <h1>Carousel</h1>
+            <Carousel options={{ fullWidth: true, indicators: true  }} images={[
+                '../images/losangeles.jpg',
+                '../images/nyc.jpeg',
+                '../images/Paris.jpg',
+                '../images/SF-Night.jpg'
+            ]} />
       );
     }
 }
 
-export default Carousel;
+export default Slider;

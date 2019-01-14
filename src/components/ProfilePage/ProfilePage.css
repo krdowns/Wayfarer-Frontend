@@ -1,0 +1,13 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+.profile-page-body {
+    border-top: 2px solid white;
+}
+.Post-Container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}

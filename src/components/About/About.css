@@ -1,14 +1,21 @@
-h1 {
-    text-align: center;
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-
 section {
     display: flex;
     flex-direction: row;
 }
 
+.about-header {
+    /* font-family: 'Cabin Sketch', cursive; */
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
 article {
     margin: 5px 10px;
+}
+
+p {
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    font-weight: lighter;
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {Carousel} from 'react-materialize'
 import {
   Route,
   Switch
@@ -9,8 +8,9 @@ import About from '../About/About'
 import NavBar from '../NavBar/NavBar'
 import CityPage from '../CityPage/CityPage'
 import CitiesContainer from '../CitiesContainer/CitiesContainer'
-import LogOut from '../LogOut/LogOut'
+import ProfilePage from '../ProfilePage/ProfilePage'
 import './App.css'
+import Slider from "../Carousel/Carousel"
 
 class App extends Component {
   constructor () {
@@ -19,6 +19,8 @@ class App extends Component {
     this.state = {
       email: '',
       password: '',
+      name: '',
+      currentCity: '',
       isLoggedIn: false
     }
 
@@ -28,7 +30,7 @@ class App extends Component {
     this.handleSignUp = this.handleSignUp.bind(this)
   }
 
-  componentDidMount () {
+  componentDidMount (res) {
     if (localStorage.token) {
       this.setState({
         isLoggedIn: true
@@ -44,6 +46,8 @@ class App extends Component {
     this.setState({
       email: '',
       password: '',
+      name: '',
+      currentCity: '',
       isLoggedIn: false
     })
     localStorage.clear()
@@ -58,32 +62,40 @@ class App extends Component {
 
   handleSignUp = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3000/users/signup', 
+    axios.post('http://localhost:3001/users/signup', 
 			{ email: this.state.email,
-      	password: this.state.password }
+        password: this.state.password,
+        name: this.state.name,
+        currentCity: this.state.currentCity
+      }
       )
       .then( response => {
         localStorage.token = response.data.token
           this.setState({
+            name: response.data.name,
+            currentCity: response.data.currentCity,
             isLoggedIn: true
           })
           console.log(response)
+          window.location.href = '/ProfilePage';
       })
+      
       .catch(err => console.log(err))
       
   }
 
   handleLogIn = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3000/users/login', {
+    axios.post('http://localhost:3001/users/login', {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     })
     .then( response => {
       localStorage.token = response.data.token
       this.setState({
         isLoggedIn: true
       })
+      window.location.href = '/ProfilePage';
     })
     .catch(err => console.log(err))
   }
@@ -91,33 +103,32 @@ class App extends Component {
   render () {
     return (
       <div>
-        <NavBar isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} handleSignUp={this.handleSignUp}/>
+        <NavBar isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} handleSignUp={this.handleSignUp} handleLogOut={this.handleLogOut}/>
         <div className='body'>
-        <Carousel options={{ fullWidth: true, indicators: true  }} images={[
-          '../images/losangeles.jpg',
-          '../images/nyc.jpeg',
-          '../images/Paris.jpg',
-          '../images/SF-Night.jpg'
-        ]} />
           <Switch>
-            <Route path='/logout'
-              render={(props) => {
-                return (
-                  <LogOut isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />
-                )
-              }}
-            />
-            <Route
-              path='/'
+            <Route path='/CityPage'
               render={() => {
                 return (
-                  <About isLoggedIn={this.state.isLoggedIn} />
+                  <CityPage isLoggedIn={this.state.isLoggedIn} />
                 )
               }}
             />
-            <Route
-              path='/CityPage'
-              compenent={CityPage}
+            <Route path='/ProfilePage'
+              render={(props) => {
+                return (
+                  <ProfilePage isLoggedIn={this.state.isLoggedIn} name={this.state.name} currentCity={this.state.currentCity} />
+                )
+              }}
+            />
+            <Route path='/' 
+              render={() => {
+                return (
+                  <div>
+                    <Slider />
+                    <About isLoggedIn={this.state.isLoggedIn} />
+                  </div>
+                )
+              }}
             />
           </Switch>
         </div>
