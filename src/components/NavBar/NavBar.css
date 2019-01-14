@@ -37,3 +37,7 @@ a:hover {
     flex-direction: row;
     justify-content: space-around;
 }
+
+.modal-content {
+    color: black;
+}
