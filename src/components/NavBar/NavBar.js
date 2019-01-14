@@ -27,7 +27,7 @@ class NavBar extends Component {
         </Modal>)
     }
     return (
-      <Navbar brand='Wayfarer' className='nav' right>
+      <Navbar brand='WAYFARER' className='nav' right>
         <div className="navButtons">
           {navBarItems}
         </div>

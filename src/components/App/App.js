@@ -8,6 +8,7 @@ import axios from 'axios'
 import NavBar from '../NavBar/NavBar'
 import About from '../About/About'
 import CityPage from '../CityPage/CityPage'
+import Post from '../Post/Post'
 import ProfilePage from '../ProfilePage/ProfilePage'
 import Slider from "../Carousel/Carousel"
 import './App.css'
@@ -111,7 +112,7 @@ class App extends Component {
         <div className='body'>
           <Switch>
 
-            <Route path='/CityPage'
+            <Route path='/citypage'
               render={() => {
                 return (
                   <CityPage isLoggedIn={this.state.isLoggedIn} />
@@ -122,6 +123,13 @@ class App extends Component {
               render={(props) => {
                 return (
                   <ProfilePage isLoggedIn={this.state.isLoggedIn} name={this.state.name} currentCity={this.state.currentCity} />
+                )
+              }}
+            />
+            <Route path='/post'
+              render={() => {
+                return (
+                  <Post />
                 )
               }}
             />

@@ -4,7 +4,7 @@ section {
 }
 
 .about-header {
-    /* font-family: 'Cabin Sketch', cursive; */
+    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -15,7 +15,7 @@ article {
 }
 
 p {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lato', sans-serif;
     color: white;
     font-weight: lighter;
 }
