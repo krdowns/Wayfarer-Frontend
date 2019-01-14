@@ -1,27 +1,26 @@
-.user-posts-tab {
+.recent-user-posts-tab {
     text-align: center;
     padding-left: 5%;
     padding-right: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 
-.user-posts-tab h3 {
-    margin-top: 1%;
-    margin-bottom: 2%;
+.recent-user-posts-tab h4 {
+    margin-top: -12.5%; 
 }
 
-.user-posts-tab img {
+.recent-post-image {
     width: 40%;
     height: 40%;
     filter: grayscale(100%);
-    margin-top: 3.35%;
+    margin-top: 2.35%;
 }
 
-.user-posts-tab img:hover {
+.recent-post-image:hover {
     filter: grayscale(0%);
 }
 
-.post-snippet {
+.recent-post-snippet {
     display: flex;
     flex-direction: row;
     text-align: left;
@@ -30,29 +29,29 @@
     border-bottom: 2px solid #333;
 }
 
-.post-article {
+.recent-post-article {
     margin-left: 4%;
-    margin-top: 3.1%;
+    margin-top: 9.3%;
 }
 
-.post-snippet p {
+.recent-post-snippet p {
     align-self: flex-end;
-    max-height: 7.5em;
+    max-height: 12em;
     overflow:hidden;
-    position: relative; 
+    position: relative;
+    margin-top: 7.5%; 
 
 }
 
-.post-snippet p:before {
+.recent-post-snippet p:before {
     content: '...';
     position: absolute;
-    right: 96%;
-    top: 80%;
-    font-size: 24px;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
 }
 
-  /* hide ... if we have text, which is less than or equal to max lines */
-  .post-snippet p:after {
+  .recent-post-snippet p:after {
     content: '';
     position: absolute;
     right: 0;
