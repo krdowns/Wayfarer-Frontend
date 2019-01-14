@@ -6,16 +6,31 @@ section {
 .about-header {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 75px;
     margin-bottom: 15px;
+    font-size: 68px;
+    font-weight: 200;
+}
+
+.about-text {
+    background: #111;
+}
+
+.about-text h3 {
+    text-align: left;
+    margin-bottom: 3%;
+    margin-top: 5%;
 }
 
 article {
-    margin: 5px 10px;
+    text-align: justify;
+    margin: 1% 4% 5% 4%;
 }
 
 p {
     font-family: 'Lato', sans-serif;
     color: white;
     font-weight: lighter;
+    margin-left: 2%;
+    margin-right: 2%;
 }

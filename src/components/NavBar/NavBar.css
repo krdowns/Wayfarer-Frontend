@@ -30,7 +30,8 @@ a {
 }
 
 a:hover {
-    color: gold;
+    text-decoration: underline;
+    text-decoration-color: gold;
 }
 
 .navButtons {
