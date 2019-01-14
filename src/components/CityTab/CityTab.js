@@ -6,7 +6,7 @@ class CityTab extends Component {
     return (
         <div className="single-city-tab">
           <img className="post-image" src="../images/SF-Night.jpg" alt="SF" />
-          <h1>San Francisco</h1>
+          <h3>San Francisco</h3>
         </div>
     )
   }

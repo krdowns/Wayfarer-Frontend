@@ -1,6 +1,7 @@
 .city-detail {
     display: flex;
     flex-direction: row;
+    margin-right: -10%;
 }
 
 .city-detail-header {
@@ -21,9 +22,12 @@
 
 .city-detail-img {
     width: 40%;
-    height: 30%;
+    height: 40%;
     margin-left: 18.5%;
     margin-top: 2%;
     margin-bottom: 5%;
-    filter: grayscale(100%)
+}
+
+.city-detail-posts {
+    margin-right: -5%;
 }

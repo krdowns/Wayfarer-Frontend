@@ -6,7 +6,7 @@ class UserPosts extends Component {
   render () {
     return (
         <div className="user-post-content"> 
-          <h1>Recent Posts</h1>
+          <h3>Recent Posts</h3>
           <div className="profile-post-container">
             <UserPostTab />
           </div>

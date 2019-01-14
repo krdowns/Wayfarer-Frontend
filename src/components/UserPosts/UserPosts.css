@@ -1,4 +1,4 @@
-.user-post-content h1 {
+.user-post-content h3 {
     text-align: left;
     margin-left: 5.2%;
     margin-top: 9%;
@@ -8,7 +8,12 @@
     width: 90%;
 }
 
+.user-post-content {
+    margin-top: -0.25%;
+}
+
 .profile-post-container {
     width: 107%;
     padding-right: .6%;
+    margin-bottom: 5%;
 }

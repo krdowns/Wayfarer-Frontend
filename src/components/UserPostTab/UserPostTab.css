@@ -13,6 +13,12 @@
 .user-posts-tab img {
     width: 40%;
     height: 40%;
+    filter: grayscale(100%);
+    margin-top: 3.35%;
+}
+
+.user-posts-tab img:hover {
+    filter: grayscale(0%);
 }
 
 .post-snippet {
@@ -31,4 +37,26 @@
 
 .post-snippet p {
     align-self: flex-end;
+    max-height: 7.5em;
+    overflow:hidden;
+    position: relative; 
 }
+
+.post-snippet p:before {
+    content: '...';
+    position: absolute;
+    right: 1%;
+    bottom:-5%;
+    font-size: 24px;
+}
+
+  /* hide ... if we have text, which is less than or equal to max lines */
+  .post-snippet p:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: #111;
+  }
