@@ -7,11 +7,12 @@ class ProfileDetails extends Component {
       <div className="profile-page-left">
         <img className="profile-pic" src="../images/dark-profile-default.jpg" alt="profile-pic" />
         <div className="user-info">
-          <h3>Kenny</h3>
-          <h7>City: San Francisco 
+          <h6>Kenny Downs</h6>
+            <br/>
+          <h6>City: San Francisco 
             <br/>
             <br/>Joined: 01/10/19 
-          </h7>
+          </h6>
         </div>
       </div>
     )

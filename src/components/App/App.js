@@ -4,13 +4,13 @@ import {
   Switch
 } from 'react-router-dom'
 import axios from 'axios'
-import About from '../About/About'
 import NavBar from '../NavBar/NavBar'
+import About from '../About/About'
 import CityPage from '../CityPage/CityPage'
-import CitiesContainer from '../CitiesContainer/CitiesContainer'
 import ProfilePage from '../ProfilePage/ProfilePage'
-import './App.css'
 import Slider from "../Carousel/Carousel"
+import './App.css'
+
 
 class App extends Component {
   constructor () {
