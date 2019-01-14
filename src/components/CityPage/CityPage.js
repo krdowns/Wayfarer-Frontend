@@ -1,18 +1,27 @@
 import React, { Component } from 'react'
 import './CityPage.css'
 import CityTab from '../CityTab/CityTab'
+import CityDetail from '../CityDetail/CityDetail'
 
 class CityPage extends Component {
   render () {
     return (
-        <div>
+        <div className="city-page-content">
           <section className="cities-list">
-            <h1>Cities</h1>
+            <h2>Cities</h2>
             <div>
               <CityTab />
+              <CityTab />
+              <CityTab />
+              <CityTab />
+              
             </div>
           </section>
-
+          <section className="city-detail-column">
+            <div>
+              <CityDetail />
+            </div>
+          </section>
         </div>
     )
   }

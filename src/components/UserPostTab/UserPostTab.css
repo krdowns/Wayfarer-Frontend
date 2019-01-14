@@ -1,0 +1,34 @@
+.user-posts-tab {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 10%;
+    margin-bottom: 5%;
+}
+
+.user-posts-tab h3 {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.user-posts-tab img {
+    width: 40%;
+    height: 40%;
+}
+
+.post-snippet {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin-top: -0.75%;
+    padding-bottom: 1%;
+    border-bottom: 2px solid #333;
+}
+
+.post-article {
+    margin-left: 4%;
+    margin-top: 3.1%;
+}
+
+.post-snippet p {
+    align-self: flex-end;
+}

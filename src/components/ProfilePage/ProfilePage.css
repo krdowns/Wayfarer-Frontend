@@ -1,13 +1,43 @@
-* {
-    background-color: black;
+.profile-page-main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1%;
+}
+
+.user-info-tab {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.edit-profile-button {
+    margin-left: -5.5%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+    background-color: #111;
+    color: white;
+    width: 112%;
+}
+
+.edit-profile-button:hover {
+    border: 1px 0 1px 0 solid black;
+    background-color: #222;
     color: white;
 }
 
-.profile-page-body {
-    border-top: 2px solid white;
+.dividing-line {
+    border: 1px solid #333;
+    background-color: #333;
 }
-.Post-Container {
-    text-align: center;
+
+.user-post-container {
+    /* border: 2px solid orange; */
+    width: 82%;
     display: flex;
     flex-direction: column;
 }

@@ -1,0 +1,20 @@
+.user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: .75em;
+    margin-top: 5%;
+    height: 100vh;
+}
+
+.profile-page-left img {
+    width: 112%;
+    margin-left: -5.5%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.user-info p {
+    width: 100%;
+    text-align: center;
+}
+
