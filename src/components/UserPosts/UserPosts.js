@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './UserPosts.css'
-import UserPostTab from '../UserPostTab/UserPostTab'
+import RecentPostTab from '../RecentPostTab/RecentPostTab'
 
 class UserPosts extends Component {
   render () {
@@ -8,7 +8,9 @@ class UserPosts extends Component {
         <div className="user-post-content"> 
           <h3>Recent Posts</h3>
           <div className="profile-post-container">
-            <UserPostTab />
+            <RecentPostTab />
+            <RecentPostTab />
+            <RecentPostTab />
           </div>
         </div>
     )
