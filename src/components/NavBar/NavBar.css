@@ -30,6 +30,11 @@ a {
 }
 
 a:hover {
-    color: #FFFF00;
-    text-decoration: none;
+    color: #ccff00;
+}
+
+.navButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
