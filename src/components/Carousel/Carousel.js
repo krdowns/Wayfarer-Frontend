@@ -7,25 +7,15 @@ class CarouselComp extends Component {
         <section> 
               <Carousel>
                     <Carousel.Item>
-                        <img width={900} height={500} alt="900x500" src="/images/losangeles.jpg" />
-                        <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
+                        <img width={1450} height={750} alt="1450x750" src="/images/losangeles.jpg" />
                     </Carousel.Item>
+
                     <Carousel.Item>
-                        <img width={900} height={500} alt="900x500" src="/images/nyc.jpg" />
-                        <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
+                        <img width={1450} height={750} alt="1450x750" src="/images/nyc.jpg" />
                     </Carousel.Item>
+                    
                     <Carousel.Item>
-                        <img width={900} height={500} alt="900x500" src="/images/SF-Night.jpg" />
-                        <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </Carousel.Caption>
+                        <img width={1450} height={750} alt="1450x750" src="/images/SF-Night.jpg" />
                     </Carousel.Item>
                 </Carousel>
         </section>   
