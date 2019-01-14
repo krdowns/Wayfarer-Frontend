@@ -1,5 +1,6 @@
 nav {
-    background-color: black;
+    background-color: cornflowerblue;
+    padding: 20px;
 }
 a {
     text-decoration: none;
@@ -7,5 +8,34 @@ a {
 }
 
 li {
-    display: flex;
+    display:inline-block;
+    color:white;
+    margin-right:150px;
+    padding-right: 70px;
+    padding-left: 25px;
+}
+
+.waves-yellow {
+    position: absolute;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    top: -7px;
+    left: 1200px;
+    right: -299px;
+    bottom: -280px;
+    background-color: blanchedalmond;
+}
+
+.waves-light {
+    position: absolute;
+    left: 1000px;
+    top: -7px;
+    background-color: blanchedalmond;
+
+}
+
+.brand-logo {
+    position: relative;
+    transition: .5s ease;
+    top: -20px;
 }
