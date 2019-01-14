@@ -13,6 +13,7 @@
 .user-posts-tab img {
     width: 40%;
     height: 40%;
+    filter: grayscale(100%);
 }
 
 .post-snippet {
