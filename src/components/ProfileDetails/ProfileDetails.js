@@ -8,9 +8,12 @@ class ProfileDetails extends Component {
         <img className="profile-pic" src="../images/dark-profile-default.jpg" alt="profile-pic" />
         <button class="edit-profile-button">Edit Profile</button>
         <div className="user-info">
-          <h6 className="user-name">Kenny Downs</h6>
-          <h6 className="current-city">City: San Francisco</h6>
-          <h6 className="join-date">Joined: 01/10/19 </h6>
+          <h3>{this.props.name}</h3>
+          <h6>City: {this.props.currentCity}
+          {this.props.edit}
+            <br/>
+            <br/>Joined: 01/10/19 
+            </h6>
         </div>
       </div>
     )

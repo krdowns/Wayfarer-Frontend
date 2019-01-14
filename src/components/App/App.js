@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {
   Route,
-  Switch
+  Switch,
+  withRouter
 } from 'react-router-dom'
 import axios from 'axios'
 import NavBar from '../NavBar/NavBar'
@@ -75,9 +76,8 @@ class App extends Component {
             name: response.data.name,
             currentCity: response.data.currentCity,
             isLoggedIn: true
-          })
-          console.log(response)
-          window.location.href = '/ProfilePage';
+          }, this.props.history.push("/profilepage"))
+          
       })
       
       .catch(err => console.log(err))
@@ -92,10 +92,14 @@ class App extends Component {
     })
     .then( response => {
       localStorage.token = response.data.token
+      console.log(response.data)
       this.setState({
-        isLoggedIn: true
-      })
-      window.location.href = '/ProfilePage';
+            name: response.data.name,
+            currentCity: response.data.currentCity,
+            password: '',
+            isLoggedIn: true,
+            redirect: true
+          }, this.props.history.push("/profilepage"))
     })
     .catch(err => console.log(err))
   }
@@ -106,6 +110,7 @@ class App extends Component {
         <NavBar isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} handleSignUp={this.handleSignUp} handleLogOut={this.handleLogOut}/>
         <div className='body'>
           <Switch>
+
             <Route path='/CityPage'
               render={() => {
                 return (
@@ -113,7 +118,7 @@ class App extends Component {
                 )
               }}
             />
-            <Route path='/ProfilePage'
+            <Route path='/profilepage'
               render={(props) => {
                 return (
                   <ProfilePage isLoggedIn={this.state.isLoggedIn} name={this.state.name} currentCity={this.state.currentCity} />
@@ -130,6 +135,7 @@ class App extends Component {
                 )
               }}
             />
+
           </Switch>
         </div>
       </div>
@@ -137,4 +143,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default withRouter(App);
