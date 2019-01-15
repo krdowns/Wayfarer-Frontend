@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Navbar, NavItem, Modal } from 'react-materialize'
-import { Link } from 'react-router-dom'
 import LogInForm from '../LogInForm/LogInForm'
 import SignUpForm from '../SignUpForm/SignUpForm'
 import LogOut from '../LogOut/LogOut'

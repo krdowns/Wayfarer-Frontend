@@ -1,0 +1,13 @@
+.update-profile-name, .update-profile-city {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1%;
+}
+
+.update-profile-city {
+    margin-bottom: 3%;
+}
+
+.update-profile-submit {
+    width: 100%;
+}

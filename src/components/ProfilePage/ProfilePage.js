@@ -9,7 +9,7 @@ class ProfilePage extends Component {
     let editButton = []
     if (this.props.isLoggedIn) {
       editButton.push(
-        <Modal header='Edit Info' trigger={<a className="formButtons">Edit Info</a>}>
+        <Modal header='Edit Info' trigger={<a href="/"className="formButtons">Edit Info</a>}>
           <h2>Edit Form goes here :)</h2>
         </Modal>)
     }
