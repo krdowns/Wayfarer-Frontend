@@ -17,6 +17,10 @@
     margin-top: 3.35%;
 }
 
+.post-image {
+    width: 50%;
+}
+
 .user-posts-tab img:hover {
     filter: grayscale(0%);
 }

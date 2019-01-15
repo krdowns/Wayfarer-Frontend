@@ -6,16 +6,15 @@
 }
 
 .brand-logo {
-    margin-top: 5px;
+    margin-top: 7.5px;
     margin-left: 1%;
-    font-family: 'Questrial', sans-serif;
-    font-weight: 600;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
     transform: skew(-3deg);
 }
 
 .nav-wrapper {
     width: 100%;
-    box-shadow: 0 0 4px #FFFF00;
 }
 
 ul {
@@ -27,10 +26,12 @@ a {
     text-decoration: none;
     color: white;
     justify-content: space-between;
+    margin-top: 1%;
 }
 
 a:hover {
-    color: #ccff00;
+    text-decoration: underline;
+    text-decoration-color: gold;
 }
 
 .navButtons {

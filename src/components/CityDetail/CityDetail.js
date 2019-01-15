@@ -8,12 +8,13 @@ class CityDetail extends Component {
       <div>
         <div className="city-detail">
           <div className="city-detail-header">
-            <h2>San Francisco</h2><br/>
-            <h4>USA</h4>
+            <h3>London</h3><br/>
+            <h4>United Kingdom</h4>
           </div>
           <img className="city-detail-img" src="../images/SF-Night.jpg" alt="SF" />
         </div>
         <div className="city-detail-posts">
+        <h4>Posts</h4>
           <UserPostTab />
           <UserPostTab />
         </div>
