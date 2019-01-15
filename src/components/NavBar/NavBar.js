@@ -1,111 +1,39 @@
 import React, { Component } from 'react'
-import {Modal, Button} from "react-materialize"
-import axios from 'axios'
+import { Navbar, NavItem, Modal } from 'react-materialize'
+import { Link } from 'react-router-dom'
+import LogInForm from '../LogInForm/LogInForm'
+import SignUpForm from '../SignUpForm/SignUpForm'
+import LogOut from '../LogOut/LogOut'
 import './NavBar.css'
 
 class NavBar extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-      email: '',
-      password: '',
-      isLoggedIn: false
-    }
-
-    this.handleLogOut = this.handleLogOut.bind(this)
-    this.handleInput = this.handleInput.bind(this)
-    this.handleLogIn = this.handleLogIn.bind(this)
-    this.handleSignUp = this.handleSignUp.bind(this)
-  }
-
-  componentDidMount () {
-    if (localStorage.token) {
-      this.setState({
-        isLoggedIn: true
-      })
+  render () {
+    let navBarItems = [<NavItem key={1} href='/'></NavItem>]
+    if (this.props.isLoggedIn) {
+      navBarItems.push(
+        <NavItem key={5} href='/CityPage'>Explore</NavItem>)
+        navBarItems.push(
+          <NavItem key={5} href='/ProfilePage'>Profile</NavItem>)
+      navBarItems.push(
+        <Modal header='Are you sure you want to log out?' trigger={<a className="formButtons">Log Out</a>}>
+          <LogOut handleLogOut={this.props.handleLogOut}/>
+        </Modal>)
     } else {
-      this.setState({
-        isLoggedIn: false
-      })
+      navBarItems.push(
+        <Modal header='Sign Up' trigger={<a className="formButtons">Sign Up</a>}>
+          <SignUpForm handleInput={this.props.handleInput} handleSignUp={this.props.handleSignUp}/>
+        </Modal>)
+      navBarItems.push(
+        <Modal header='Login' trigger={<a className="formButtons">Login</a>}>
+          <LogInForm handleInput={this.props.handleInput} handleLogIn={this.props.handleLogIn} />
+        </Modal>)
     }
-  }
-
-  handleLogOut = () => {
-    this.setState({
-      email: '',
-      password: '',
-      isLoggedIn: false
-    })
-    localStorage.clear()
-  }
-
-  handleInput (e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  }
-
-  handleSignUp = (e) => {
-    e.preventDefault()
-    axios.post('http://localhost:3001/users/signup', 
-			{ email: this.state.email,
-      	password: this.state.password }
-			)
-      .then( response => {
-        localStorage.token = response.data.token
-          this.setState({
-            isLoggedIn: true
-          })
-      })
-      .catch(err => console.log(err))
-  }
-
-  handleLogIn = (e) => {
-    e.preventDefault()
-    axios.post('http://localhost:3001/users/login', {
-      email: this.state.email,
-      password: this.state.password
-    })
-    .then( response => {
-      localStorage.token = response.data.token
-      this.setState({
-        isLoggedIn: true
-      })
-    })
-    .catch(err => console.log(err))
-  }
-
-
-  render () {    
     return (
-      <div className="navbar-fixed">
-        <nav>
-            <div className="nav-wrapper">
-            <a href="/" className="brand-logo left">Wayfarer</a>
-            
-              <Modal
-              header='Sign Up'
-              trigger={<Button waves='light'>Sign Up</Button>}>
-              <label htmlFor='email'>Email</label>
-              <input type='text' name='email' onChange={this.props.handleInput} />
-              <label htmlFor='password'>Password</label>
-              <input type='password' name='password' onChange={this.props.handleInput} />
-              <input value='Submit' type='submit' onClick={this.props.handleSignUp} />
-              </Modal>
-              
-              <Modal header="Log In"
-              trigger={<Button waves="yellow">Login</Button>}>
-              <label htmlFor='email'>Email</label>
-              <input type='text' name='email' onChange={this.props.handleInput} />
-              <label htmlFor='password'>Password</label>
-              <input type='password' name='password' onChange={this.props.handleInput} />
-              <input value='Submit' type='submit' onClick={this.props.handleLogIn} />
-              </Modal>
-
-            </div>
-          </nav>
-      </div>
+      <Navbar brand='WAYFARER' className='nav' right>
+        <div className="navButtons">
+          {navBarItems}
+        </div>
+      </Navbar>
     )
   }
 }

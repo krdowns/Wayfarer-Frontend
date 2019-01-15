@@ -1,0 +1,43 @@
+.user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: .75em;
+    margin-top: 5%;
+    height: 100vh;
+}
+
+.profile-page-left img {
+    width: 112%;
+    margin-left: -5.5%;
+    text-align: center;
+    margin-bottom: -1.5%;
+}
+
+.edit-profile-button {
+    margin-left: -5.5%;
+    font-size: 12px;
+    border: none;
+    background-color: #111;
+    color: #777;
+    width: 112%;
+}
+
+.edit-profile-button:hover {
+    background-color: #111;
+    color: #FFFF00;
+}
+
+
+.user-info p {
+    width: 100%;
+    text-align: center;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+.current-city {
+    margin-top: 15%;
+    margin-bottom: -1%;
+}

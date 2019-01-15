@@ -1,41 +1,45 @@
-nav {
+.nav {
     background-color: cornflowerblue;
-    padding: 20px;
-}
-a {
-    text-decoration: none;
-    color: white;
-}
-
-li {
-    display:inline-block;
-    color:white;
-    margin-right:150px;
-    padding-right: 70px;
-    padding-left: 25px;
-}
-
-.waves-yellow {
-    position: absolute;
-    -webkit-transition: .5s ease;
-    transition: .5s ease;
-    top: -7px;
-    left: 1200px;
-    right: -299px;
-    bottom: -280px;
-    background-color: white;
-}
-
-.waves-light {
-    position: absolute;
-    left: 1000px;
-    top: -7px;
-    background-color: white;
-
+    height: 75px;
+    display: flex;
+    flex-direction: row;
 }
 
 .brand-logo {
-    position: relative;
-    transition: .5s ease;
-    top: -20px;
+    margin-top: 7.5px;
+    margin-left: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    transform: skew(-3deg);
+}
+
+.nav-wrapper {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    height: 95%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: gold;
+}
+
+.navButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.modal-content {
+    color: black;
 }
