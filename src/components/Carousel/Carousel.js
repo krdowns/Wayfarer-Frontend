@@ -11,9 +11,9 @@ class CarouselComp extends Component {
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <img width={1450} height={750} alt="1450x750" src="/images/nyc.jpg" />
+                        <img width={1450} height={750} alt="1450x750" src="/images/nyc.jpeg" />
                     </Carousel.Item>
-                    
+
                     <Carousel.Item>
                         <img width={1450} height={750} alt="1450x750" src="/images/SF-Night.jpg" />
                     </Carousel.Item>
