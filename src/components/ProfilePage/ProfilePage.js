@@ -3,6 +3,7 @@ import { Modal } from 'react-materialize'
 import './ProfilePage.css'
 import ProfileDetails from '../ProfileDetails/ProfileDetails'
 import UserPosts from '../UserPosts/UserPosts'
+import EditInfoForm from '../EditInfoForm/EditInfoForm'
 
 class ProfilePage extends Component {
   render () {
@@ -10,14 +11,14 @@ class ProfilePage extends Component {
     if (this.props.isLoggedIn) {
       editButton.push(
         <Modal header='Edit Info' trigger={<a className="formButtons">Edit Info</a>}>
-          <h2>Edit Form goes here :)</h2>
+          <EditInfoForm />
         </Modal>)
     }
     return (
         <div className="profile-page-main">
           <section className="user-info-tab">
             <div>
-              <ProfileDetails name={this.props.name} currentCity={this.props.currentCity} edit={editButton} />
+              <ProfileDetails name={this.props.name} currentCity={this.props.currentCity} joinDate={this.props.joinDate} edit={editButton} />
             </div>
           </section>
           <section className="dividing-line" />

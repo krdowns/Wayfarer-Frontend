@@ -28,13 +28,11 @@
     max-width: 90%;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 72px;
-    font-weight: 100;
 }
 
 .post-header-text-container p {
     font-family: 'Lato', sans-serif;
     margin-top: -1%;
-    font-weight: 100;
     font-size: 16px;
 }
 
@@ -42,8 +40,8 @@
     background-color: white;
 }
 .post-show-page-article {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 6%;
+    margin-right: 6%;
     margin-top: 3%;
     font-size: 18px;
     line-height: 1.6em;
