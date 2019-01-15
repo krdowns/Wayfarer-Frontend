@@ -1,8 +1,7 @@
 .city-detail {
-    /* display: flex;
-    flex-direction: row; */
-    padding-right: -10%;
     max-width: 100%;
+    margin-right: 72px;
+    margin-top: 3.45%;
 }
 
 .city-detail-header {
@@ -15,11 +14,11 @@
     position: absolute;
     z-index: 1;
     text-align: center;
-    width: 58%;
+    width: 53.50%;
     padding-top: 1%;
-    margin-top: 27.35%;
+    margin-top: 23.75%;
     padding-bottom: 1%;
-    margin-left: -1.75%;
+    margin-left: -1.6%;
     position: absolute;
     z-index: 1;
     background-color: rgba(0,0,0,0.6);
@@ -28,10 +27,10 @@
 .city-detail-header h4{
     font-weight: 300;
     text-align: center;
-    width: 58%;
+    width: 53.50%;
     padding-bottom: 1.5%;
-    margin-top: 31%;
-    margin-left: -1.75%;
+    margin-top: 27.45%;
+    margin-left: -1.6%;
     position: absolute;
     z-index: 1;
     background-color: rgba(0,0,0,0.6);
@@ -40,15 +39,15 @@
 .city-detail img {
     width: 100%;
     height: 50%;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-bottom: 5%;
     position: relative;
     object-fit: cover;
 }
 
 .add-post {
-    margin-top: 32.25%;
-    margin-left: 50%;
+    margin-top: 29%;
+    margin-left: 45%;
     font-size: 16px;
     color: white;
     border: none;
@@ -63,7 +62,7 @@
 }
 
 .city-detail-posts h4 {
-    margin-left: 4.5%;
+    margin-left: 1.5%;
     margin-bottom: 1%;
 }
 

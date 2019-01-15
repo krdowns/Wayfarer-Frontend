@@ -13,7 +13,7 @@ class CityDetail extends Component {
             <h3>San Francisco</h3><br/>
             <h4>USA</h4>
             <button className="add-post">
-              <Modal header='New Post' trigger={<a className="formButtons">Add Post</a>}>
+              <Modal header='New Post' trigger={<a className="formButtons">Create Post</a>}>
                 <PostForm handleInput={this.props.handleInput} handleLogIn={this.props.handleLogIn} />
               </Modal>
             </button>
@@ -21,7 +21,7 @@ class CityDetail extends Component {
           <img className="city-detail-img" src="../images/SF-Night.jpg" alt="SF" />
         </div>
         <div className="city-detail-posts">
-        <h4>Posts</h4>
+        {/* <h4>Posts</h4> */}
           <UserPostTab />
           <UserPostTab />
         </div>

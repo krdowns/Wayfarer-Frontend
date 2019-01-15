@@ -8,7 +8,6 @@ class CityPage extends Component {
     return (
         <div className="city-page-content">
           <section className="cities-list">
-            <h2>Cities</h2>
             <div>
               <CityTab />
               <CityTab />
@@ -16,7 +15,6 @@ class CityPage extends Component {
               <CityTab />
             </div>
           </section>
-          <div className="dividing-line"></div>
           <section className="city-detail-column">
             <div>
               <CityDetail />
