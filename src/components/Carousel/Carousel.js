@@ -1,27 +1,17 @@
 import React, {Component} from 'react';
-import {Carousel} from 'react-bootstrap';
+import {Carousel} from 'react-materialize'
 
-class CarouselComp extends Component {
+class Slider extends Component {
     render() {
         return (
-        <section> 
-              <Carousel>
-                    <Carousel.Item>
-                        <img width={1450} height={750} alt="1450x750" src="/images/losangeles.jpg" />
-                    </Carousel.Item>
-
-                    <Carousel.Item>
-                        <img width={1450} height={750} alt="1450x750" src="/images/nyc.jpeg" />
-                    </Carousel.Item>
-
-                    <Carousel.Item>
-                        <img width={1450} height={750} alt="1450x750" src="/images/SF-Night.jpg" />
-                    </Carousel.Item>
-                </Carousel>
-        </section>   
-
-        );
+            <Carousel className="carousel" options={{ fullWidth: true, indicators: true  }} images={[
+                '../images/nyc.jpeg',
+                '../images/Paris.jpg',
+                '../images/SF-Night.jpg',
+                '../images/losangeles.jpg'
+            ]} />
+      );
     }
 }
 
-export default CarouselComp;
+export default Slider;

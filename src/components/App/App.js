@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import {
   Route,
-  Switch
+  Switch,
+  withRouter
 } from 'react-router-dom'
 import axios from 'axios'
-import About from '../About/About'
 import NavBar from '../NavBar/NavBar'
-import CarouselComp from '../Carousel/Carousel'
-// import CitiesContainer from '../CitiesContainer/CitiesContainer'
-import SignUpForm from '../SignUpForm/SignUpForm'
-import LogInForm from '../LogInForm/LogInForm'
-import LogOut from '../LogOut/LogOut'
+import About from '../About/About'
+import CityPage from '../CityPage/CityPage'
+import Post from '../Post/Post'
+import ProfilePage from '../ProfilePage/ProfilePage'
+import Slider from "../Carousel/Carousel"
 import './App.css'
+
 
 class App extends Component {
   constructor () {
@@ -20,6 +21,8 @@ class App extends Component {
     this.state = {
       email: '',
       password: '',
+      name: '',
+      currentCity: '',
       isLoggedIn: false
     }
 
@@ -29,7 +32,7 @@ class App extends Component {
     this.handleSignUp = this.handleSignUp.bind(this)
   }
 
-  componentDidMount () {
+  componentDidMount (res) {
     if (localStorage.token) {
       this.setState({
         isLoggedIn: true
@@ -45,9 +48,12 @@ class App extends Component {
     this.setState({
       email: '',
       password: '',
+      name: '',
+      currentCity: '',
       isLoggedIn: false
     })
     localStorage.clear()
+    window.location.href = '/';
   }
 
   handleInput (e) {
@@ -60,28 +66,41 @@ class App extends Component {
     e.preventDefault()
     axios.post('http://localhost:3001/users/signup', 
 			{ email: this.state.email,
-      	password: this.state.password }
-			)
+        password: this.state.password,
+        name: this.state.name,
+        currentCity: this.state.currentCity
+      }
+      )
       .then( response => {
         localStorage.token = response.data.token
           this.setState({
+            name: response.data.name,
+            currentCity: response.data.currentCity,
             isLoggedIn: true
-          })
+          }, this.props.history.push("/profilepage"))
+          
       })
+      
       .catch(err => console.log(err))
+      
   }
 
   handleLogIn = (e) => {
     e.preventDefault()
     axios.post('http://localhost:3001/users/login', {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     })
     .then( response => {
       localStorage.token = response.data.token
+      console.log(response.data)
       this.setState({
-        isLoggedIn: true
-      })
+            name: response.data.name,
+            currentCity: response.data.currentCity,
+            password: '',
+            isLoggedIn: true,
+            redirect: true
+          }, this.props.history.push("/profilepage"))
     })
     .catch(err => console.log(err))
   }
@@ -89,41 +108,42 @@ class App extends Component {
   render () {
     return (
       <div>
-        <NavBar />
+        <NavBar isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} handleSignUp={this.handleSignUp} handleLogOut={this.handleLogOut}/>
         <div className='body'>
-        <div>
-          <CarouselComp />
-        </div>
           <Switch>
-            <Route path='/signup'
-              render={(props) => {
-                return (
-                  <SignUpForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleSignUp={this.handleSignUp} />
-                )
-              }}
-            />
-            <Route path='/logout'
-              render={(props) => {
-                return (
-                  <LogOut isLoggedIn={this.state.isLoggedIn} handleLogOut={this.handleLogOut} />
-                )
-              }}
-            />
-            <Route path='/login'
-              render={(props) => {
-                return (
-                  <LogInForm isLoggedIn={this.state.isLoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
-                )
-              }}
-            />
-            <Route
-              path='/'
+
+            <Route path='/citypage'
               render={() => {
                 return (
-                  <About isLoggedIn={this.state.isLoggedIn} />
+                  <CityPage isLoggedIn={this.state.isLoggedIn} />
                 )
               }}
             />
+            <Route path='/profilepage'
+              render={(props) => {
+                return (
+                  <ProfilePage isLoggedIn={this.state.isLoggedIn} name={this.state.name} currentCity={this.state.currentCity} />
+                )
+              }}
+            />
+            <Route path='/post'
+              render={() => {
+                return (
+                  <Post />
+                )
+              }}
+            />
+            <Route path='/' 
+              render={() => {
+                return (
+                  <div>
+                    <Slider />
+                    <About isLoggedIn={this.state.isLoggedIn} />
+                  </div>
+                )
+              }}
+            />
+
           </Switch>
         </div>
       </div>
@@ -131,4 +151,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default withRouter(App);
