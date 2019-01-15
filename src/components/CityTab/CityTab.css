@@ -33,4 +33,11 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.single-city-tab h4:hover {
+    background-color: transparent;
+}
+
+.single-city-tab img:hover {
+    filter: grayscale(0%);
+}
 

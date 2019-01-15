@@ -56,7 +56,6 @@
     font-size: 24px;
 }
 
-  /* hide ... if we have text, which is less than or equal to max lines */
   .post-snippet p:after {
     content: '';
     position: absolute;

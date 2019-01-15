@@ -11,11 +11,13 @@ class NavBar extends Component {
     let navBarItems = [<NavItem key={1} href='/'></NavItem>]
     if (this.props.isLoggedIn) {
       navBarItems.push(
+        <NavItem key={5} href='/CityPage'>Explore</NavItem>)
+        navBarItems.push(
+          <NavItem key={5} href='/ProfilePage'>Profile</NavItem>)
+      navBarItems.push(
         <Modal header='Are you sure you want to log out?' trigger={<a className="formButtons">Log Out</a>}>
           <LogOut handleLogOut={this.props.handleLogOut}/>
         </Modal>)
-      navBarItems.push(
-        <NavItem key={5} href='/search'><input type="text" placeholder="Search Cities..."></input></NavItem>)
     } else {
       navBarItems.push(
         <Modal header='Sign Up' trigger={<a className="formButtons">Sign Up</a>}>

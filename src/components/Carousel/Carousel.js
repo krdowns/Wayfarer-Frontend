@@ -4,7 +4,7 @@ import {Carousel} from 'react-materialize'
 class Slider extends Component {
     render() {
         return (
-            <Carousel options={{ fullWidth: true, indicators: true  }} images={[
+            <Carousel className="carousel" options={{ fullWidth: true, indicators: true  }} images={[
                 '../images/nyc.jpeg',
                 '../images/Paris.jpg',
                 '../images/SF-Night.jpg',
