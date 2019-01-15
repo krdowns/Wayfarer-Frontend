@@ -15,7 +15,7 @@ class NavBar extends Component {
           <LogOut handleLogOut={this.props.handleLogOut}/>
         </Modal>)
       navBarItems.push(
-        <NavItem key={5} href='/search'><input type="text" placeholder="Search Cities..."></input></NavItem>)
+        <NavItem key={5}><input type="text" placeholder="Search Cities..."></input></NavItem>)
     } else {
       navBarItems.push(
         <Modal header='Sign Up' trigger={<a className="formButtons">Sign Up</a>}>

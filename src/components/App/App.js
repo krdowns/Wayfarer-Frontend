@@ -16,7 +16,6 @@ import './App.css'
 class App extends Component {
   constructor () {
     super()
-
     this.state = {
       email: '',
       password: '',
@@ -49,6 +48,7 @@ class App extends Component {
       password: '',
       name: '',
       currentCity: '',
+      joinDate: '',
       isLoggedIn: false
     })
     localStorage.clear()
@@ -67,14 +67,16 @@ class App extends Component {
 			{ email: this.state.email,
         password: this.state.password,
         name: this.state.name,
-        currentCity: this.state.currentCity
+        currentCity: this.state.currentCity,
       }
       )
       .then( response => {
         localStorage.token = response.data.token
+        console.log(response)
           this.setState({
             name: response.data.name,
             currentCity: response.data.currentCity,
+            joinDate: response.data.joinDate,
             isLoggedIn: true
           }, this.props.history.push("/profilepage"))
           
@@ -121,7 +123,7 @@ class App extends Component {
             <Route path='/profilepage'
               render={(props) => {
                 return (
-                  <ProfilePage isLoggedIn={this.state.isLoggedIn} name={this.state.name} currentCity={this.state.currentCity} />
+                  <ProfilePage isLoggedIn={this.state.isLoggedIn} name={this.state.name} currentCity={this.state.currentCity} joinDate={this.state.joinDate} />
                 )
               }}
             />

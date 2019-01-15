@@ -9,7 +9,7 @@ class ProfilePage extends Component {
     let editButton = []
     if (this.props.isLoggedIn) {
       editButton.push(
-        <Modal header='Edit Info' trigger={<a className="formButtons">Edit Info</a>}>
+        <Modal header='Edit Info' trigger={<a className="formButtons">Edit Profile</a>}>
           <h2>Edit Form goes here :)</h2>
         </Modal>)
     }
@@ -17,7 +17,7 @@ class ProfilePage extends Component {
         <div className="profile-page-main">
           <section className="user-info-tab">
             <div>
-              <ProfileDetails name={this.props.name} currentCity={this.props.currentCity} edit={editButton} />
+              <ProfileDetails name={this.props.name} currentCity={this.props.currentCity} edit={editButton} joinDate={this.props.joinDate} />
             </div>
           </section>
           <section className="dividing-line" />

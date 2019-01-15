@@ -12,7 +12,7 @@ class ProfileDetails extends Component {
           <h6>City: {this.props.currentCity}
           {this.props.edit}
             <br/>
-            <br/>Joined: 01/10/19 
+            <br/>Joined: 
             </h6>
         </div>
       </div>
