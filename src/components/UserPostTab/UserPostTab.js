@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom';
 import './UserPostTab.css'
 
 class UserPostTab extends Component {
@@ -9,7 +10,7 @@ class UserPostTab extends Component {
           <div className="post-snippet" onClick="/">
             <img className="post-image" src="../images/SF-Night.jpg" alt="SF" />
             <div className="post-article">
-              <h4>My SF Journey</h4>
+              <h4><NavLink to="/post">My SF Journey</NavLink></h4>
               <p>
                 We touch the canvas, the canvas takes what it wants. I guess that would be considered a UFO. A big cotton ball in the sky. This is your world, whatever makes you happy you can put in it. Go crazy. Here's another little happy bush All you have to learn here is how to have fun. This is your world, whatever makes you happy you can put in it. Go crazy. Here's another little happy bush All you have to learn here is how to have fun.
                 We touch the canvas, the canvas takes what it wants. I guess that would be considered a UFO. A big cotton ball in the sky. This is your world, whatever makes you happy you can put in it. Go crazy. Here's another little happy bush All you have to learn here is how to have fun. This is your world, whatever makes you happy you can put in it. Go crazy. Here's another little happy bush All you have to learn here is how to have fun.

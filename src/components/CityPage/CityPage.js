@@ -14,9 +14,9 @@ class CityPage extends Component {
               <CityTab />
               <CityTab />
               <CityTab />
-              
             </div>
           </section>
+          <div className="dividing-line"></div>
           <section className="city-detail-column">
             <div>
               <CityDetail />
