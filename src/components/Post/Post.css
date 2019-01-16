@@ -25,27 +25,45 @@
 }
 
 .post-header-text-container h2 {
-    max-width: 90%;
+    max-width: 85%;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 72px;
+    font-size: 68px;
 }
 
 .post-header-text-container p {
     font-family: 'Lato', sans-serif;
-    margin-top: -1%;
-    font-size: 16px;
+    margin-top: -2%;
+    font-size: 24px;
+}
+
+.post-header-dividing-line {
+    border-bottom: 6px solid gold;
+    margin-left:47.5%;
+    margin-top: 5%;
+    width: 5%;
+}
+
+.post-show-page-header {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    margin-top: 3%;
 }
 
 .post-show-page-container {
     background-color: white;
 }
 .post-show-page-article {
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 3%;
     font-size: 18px;
     line-height: 1.6em;
-    text-align: left;
+    text-align: justify;
     color: #333;
-    padding-bottom: 2%;
+    padding-bottom: 10%;
 }
+
+

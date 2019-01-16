@@ -4,6 +4,7 @@
     line-height: .75em;
     margin-top: 5%;
     height: 100vh;
+    color: #999;
 }
 
 .profile-page-left img {
@@ -13,10 +14,12 @@
     margin-bottom: -1.5%;
 }
 
-.edit-button {
-    background-color: #111;
-    border: 1px solid #333;
-    padding: 5%;
+.edit-profile {
+    color: #999;
+}
+.edit-profile:hover {
+    cursor: pointer;
+
 }
 
 .user-info p {
@@ -24,12 +27,7 @@
     text-align: center;
 }
 
-.user-name {
-    font-weight: 600;
-}
-
-.current-city {
-    margin-top: 15%;
-    margin-bottom: -1%;
+.profile-detail-name {
+    color: #999;
 }
 

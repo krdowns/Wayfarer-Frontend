@@ -5,16 +5,18 @@
     margin-bottom: 1%;
 }
 
-.recent-user-posts-tab h4 {
-    margin-top: -12.5%; 
+.recent-user-posts-tab h5 {
+    margin-top: -6.5%; 
     margin-left: 1.5%;
 }
 
 .recent-post-image {
     width: 40%;
-    height: 40%;
+    height: 240px;
     filter: grayscale(100%);
-    margin-top: 2.35%;
+    margin-top: 1.7%;
+    margin-bottom: .5%;
+
 }
 
 .recent-post-image:hover {
@@ -32,7 +34,7 @@
 
 .recent-post-article {
     margin-left: 4%;
-    margin-top: 9.3%;
+    margin-top: 10.75%;
 }
 
 .recent-post-snippet p {
@@ -40,23 +42,7 @@
     max-height: 12em;
     overflow:hidden;
     position: relative;
-    margin-top: 7.5%; 
+    margin-top: 4%;
+    line-height: 1.8em; 
+    color: #999;
 }
-
-.recent-post-snippet p:before {
-    content: '...';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    font-size: 16px;
-}
-
-  .recent-post-snippet p:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 1em;
-    height: 1em;
-    margin-top: 0.2em;
-    background: #111;
-  }

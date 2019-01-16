@@ -18,7 +18,7 @@ class ProfilePage extends Component {
 
     let id = "5c3e4e0b774bb591002be9ad"
     axios.get('http://localhost:3001/api/posts/profile',{headers:{"Auth": token}})
-    .then(response => {console.log(response.data)
+    .then(response => {
       this.setState({posts: response.data})
     })
     .catch(err => console.log(err))

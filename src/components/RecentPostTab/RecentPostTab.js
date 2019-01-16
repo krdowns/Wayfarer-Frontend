@@ -12,7 +12,7 @@ class RecentPostTab extends Component {
             <img className="recent-post-image" src={this.props.post.img} alt="SF" />
             <div className="recent-post-article">
               {/* <h4><NavLink to="/post">My SF Journey</NavLink></h4> */}
-              <h4><NavLink to="/post">{this.props.post.title}</NavLink></h4>
+              <h5><NavLink to="/post">{this.props.post.title}</NavLink></h5>
               
               <p>
                 {
