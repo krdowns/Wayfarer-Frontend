@@ -70,3 +70,49 @@
     padding-right: 1%;
     margin-left: -1.75%;
 }
+
+@media screen and (max-width: 992px) {
+    .city-detail-header h3 {
+        margin-top: -5%;
+        margin-left: -10%;
+        background-color: transparent;
+    }
+
+    .city-detail-header h4 {
+        margin-top: -5.5%;
+        margin-left: 50%;
+        background-color: transparent;
+    }
+
+    .city-detail-header {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 671px) {
+    .city-detail-header h4 {
+        margin-top: -6%;
+        font-size: 30px;
+
+    }
+
+}
+
+@media screen and (max-width: 601px) {
+    .city-detail-header h3 {
+        margin-top: -3.5%;
+        margin-left: -2%;
+        font-size: 30px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .city-detail-header h4 {
+        margin-top: -8%;
+        font-size: 30px;
+        width: 33%;
+
+    }
+
+}

@@ -17,3 +17,14 @@
     padding-right: .6%;
     margin-bottom: 5%;
 }
+
+@media screen and (max-width: 586px) {
+    .user-post-content {
+        margin: 0 auto;
+        width: 120%;
+    }
+
+    .user-post-content h4 {
+        text-align: center;
+    }
+}

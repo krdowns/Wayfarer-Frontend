@@ -7,7 +7,7 @@ class SignUpForm extends Component {
       <div>
         <form>
           <div>
-            <input type='text' name='name' placeholder='name' onChange={this.props.handleInput} />
+            <input type='text' name='name' placeholder='Name' onChange={this.props.handleInput} />
             <input type='text' name='currentCity' placeholder='Current City' onChange={this.props.handleInput} />
             <input type='text' name='email' placeholder="Email" onChange={this.props.handleInput} />
           </div>

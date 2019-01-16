@@ -13,9 +13,9 @@ class ProfileDetails extends Component {
         <div className="user-info">
           <h5 className="profile-detail-name">{this.props.name}</h5>
           <h6 className="current-city">City: {this.props.currentCity}
-            
             <br/>
-            <br/>Joined: {this.props.joinDate}
+            <br/>
+            Joined: {this.props.joinDate}
           </h6>
           <br></br>
         </div>

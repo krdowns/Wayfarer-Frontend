@@ -46,3 +46,15 @@
     line-height: 1.8em; 
     color: #999;
 }
+
+
+@media screen and (max-width: 586px) {
+    .recent-post-snippet {
+        display: flex;
+        flex-direction:column;
+    }
+
+    .recent-post-snippet img{
+        width: 100%;
+    }
+}
