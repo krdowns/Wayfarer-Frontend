@@ -13,20 +13,11 @@
     margin-bottom: -1.5%;
 }
 
-.edit-profile-button {
-    margin-left: -5.5%;
-    font-size: 12px;
-    border: none;
+.edit-button {
     background-color: #111;
-    color: #777;
-    width: 112%;
+    border: 1px solid #333;
+    padding: 5%;
 }
-
-.edit-profile-button:hover {
-    background-color: #111;
-    color: #FFFF00;
-}
-
 
 .user-info p {
     width: 100%;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import './LogInForm.css'
 
 class LogInForm extends Component {
