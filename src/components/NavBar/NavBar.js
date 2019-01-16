@@ -13,7 +13,7 @@ class NavBar extends Component {
       navBarItems.push(
         <NavItem key={2} href='/CityPage'>Explore</NavItem>)
         navBarItems.push(
-          <NavItem key={3} href='/ProfilePage'>Profile</NavItem>)
+          <NavItem key={3} href='#'><Link to="/ProfilePage">Profile</Link></NavItem>)
       navBarItems.push(
         <Modal header='Are you sure you want to log out?' key={4} trigger={<a className="formButtons">Log Out</a>}>
           <LogOut handleLogOut={this.props.handleLogOut}/>
