@@ -17,7 +17,7 @@ class ProfilePage extends Component {
     let token = localStorage.token
 
     let id = "5c3e4e0b774bb591002be9ad"
-    axios.get('https://whispering-beach-66155/api/posts/profile',{headers:{"Auth": token}})
+    axios.get('https://whispering-beach-66155.herokuapp.com/api/posts/profile',{headers:{"Auth": token}})
     .then(response => {
       this.setState({posts: response.data})
     })
