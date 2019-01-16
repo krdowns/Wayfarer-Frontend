@@ -21,7 +21,6 @@ class CityDetail extends Component {
           <img className="city-detail-img" src="../images/SF-Night.jpg" alt="SF" href="#" />
         </div>
         <div className="city-detail-posts">
-        {/* <h4>Posts</h4> */}
           <UserPostTab />
           <UserPostTab />
         </div>

@@ -5,7 +5,7 @@ class Post extends Component {
     render() {
       return(
         <div className='post-show-page-container'>
-          <div class="post-header-container">
+          <div className="post-header-container">
             <img className="post-show-page-image" src="../images/nyc.jpeg" alt="NYC" />
             <div className="post-header-text-container">
               <h2>New York, New York</h2>
