@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './EditInfoForm.css'
-import axios from 'axios'
 
 class EditInfoForm extends Component {
   render () {

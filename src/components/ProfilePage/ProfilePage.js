@@ -17,7 +17,7 @@ class ProfilePage extends Component {
     let token = localStorage.token
 
     let id = "5c3e4e0b774bb591002be9ad"
-    axios.get('http://localhost:3001/api/posts/profile',{headers:{"Auth": token}})
+    axios.get('/api/posts/profile',{headers:{"Auth": token}})
     .then(response => {
       this.setState({posts: response.data})
     })

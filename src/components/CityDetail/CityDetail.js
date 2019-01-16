@@ -18,7 +18,7 @@ class CityDetail extends Component {
               </Modal>
             </button>
           </div>
-          <img className="city-detail-img" src="../images/SF-Night.jpg" alt="SF" />
+          <img className="city-detail-img" src="../images/SF-Night.jpg" alt="SF" href="#" />
         </div>
         <div className="city-detail-posts">
         {/* <h4>Posts</h4> */}
