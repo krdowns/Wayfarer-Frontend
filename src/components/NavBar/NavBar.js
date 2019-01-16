@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar, NavItem, Modal } from 'react-materialize'
 import { Link } from 'react-router-dom'
-import LogInForm from '../LogInForm/LogInForm'
+import LogIn from '../LogIn/LogIn'
 import SignUpForm from '../SignUpForm/SignUpForm'
 import LogOut from '../LogOut/LogOut'
 import './NavBar.css'
@@ -25,7 +25,7 @@ class NavBar extends Component {
         </Modal>)
       navBarItems.push(
         <Modal header='Login' key={6} trigger={<a className="formButtons">Login</a>}>
-          <LogInForm handleInput={this.props.handleInput} handleLogIn={this.props.handleLogIn} />
+          <LogIn handleInput={this.props.handleInput} handleLogIn={this.props.handleLogIn} />
         </Modal>)
     }
     return (

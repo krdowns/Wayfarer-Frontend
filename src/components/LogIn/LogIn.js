@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './LogInForm.css'
+import './LogIn.css'
 
-class LogInForm extends Component {
+class LogIn extends Component {
   render () {
     return (
       <form>
@@ -19,4 +19,4 @@ class LogInForm extends Component {
   }
 }
 
-export default LogInForm
+export default LogIn
