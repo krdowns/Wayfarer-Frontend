@@ -1,28 +1,43 @@
 .single-city-tab {
     display: flex;
     flex-direction: row;
-    border: 1px solid #FFFFFF;   
-    border-radius: 10px;
     height: 125px;
-    width: 85%;
-    margin-left: 0.75%;
+    width: 95%;
+    justify-content: center;
     margin-bottom: 25px;
     margin-top: 25px;
-    padding-top: 5px;
-    background-color: rgba(0, 100, 255, 0.03);
+    padding-top: 7px;
 }
 
 .single-city-tab img {
-    width: 33%;
-    margin-left: 15px;
     padding-top: 2px;
-    margin-bottom: 7.5px;
-    border-radius: 25px;
+    margin-bottom: 8.5px;
+    width: 79.75%;
+    position: relative;
+    object-fit: cover;
+    filter: grayscale(100%);
 }
 
 .single-city-tab h4 {
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-top: 0.1%;
+    padding-top: 2.75%;
+    text-align: center;
+    width: 28.67%;
+    z-index: 1;
+    position: absolute;
+    color: white;
+    text-align: center;
+    height: 108px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: 'Josefin Sans', sans-serif;
 }
 
+.single-city-tab h4:hover {
+    background-color: transparent;
+}
+
+.single-city-tab img:hover {
+    filter: grayscale(0%);
+}
 

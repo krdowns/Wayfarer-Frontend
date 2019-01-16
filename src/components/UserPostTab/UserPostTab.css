@@ -1,12 +1,13 @@
 .user-posts-tab {
     text-align: center;
-    padding-left: 5%;
+    padding-left: 2%;
     padding-right: 10%;
-    margin-bottom: 5%;
+    margin-bottom: .5%;
 }
 
-.user-posts-tab h3 {
-    margin-top: 1%;
+.user-posts-tab h4 {
+    margin-top: 3.75%;
+    margin-left: 1.25%;
     margin-bottom: 2%;
 }
 
@@ -36,7 +37,7 @@
 
 .post-article {
     margin-left: 4%;
-    margin-top: 3.1%;
+    margin-top: 4%;
 }
 
 .post-snippet p {
@@ -55,7 +56,6 @@
     font-size: 24px;
 }
 
-  /* hide ... if we have text, which is less than or equal to max lines */
   .post-snippet p:after {
     content: '';
     position: absolute;

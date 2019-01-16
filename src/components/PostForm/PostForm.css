@@ -1,0 +1,19 @@
+.post-subject-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-area {
+    height: 50%;
+}
+
+.new-post-submit {
+    margin-top: 2%;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.post-modal {
+    background-color: rgba(0,0,0,0.2);
+}
