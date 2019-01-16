@@ -11,20 +11,20 @@ class NavBar extends Component {
     let navBarItems = [<NavItem key={1} href='/'></NavItem>]
     if (this.props.isLoggedIn) {
       navBarItems.push(
-        <NavItem key={5} href='/CityPage'>Explore</NavItem>)
+        <NavItem key={2} href='/CityPage'>Explore</NavItem>)
         navBarItems.push(
-          <NavItem key={5} href='/ProfilePage'>Profile</NavItem>)
+          <NavItem key={3} href='/ProfilePage'>Profile</NavItem>)
       navBarItems.push(
-        <Modal header='Are you sure you want to log out?' trigger={<a className="formButtons">Log Out</a>}>
+        <Modal header='Are you sure you want to log out?' key={4} trigger={<a className="formButtons">Log Out</a>}>
           <LogOut handleLogOut={this.props.handleLogOut}/>
         </Modal>)
     } else {
       navBarItems.push(
-        <Modal header='Sign Up' trigger={<a className="formButtons">Sign Up</a>}>
+        <Modal header='Sign Up' key={5} trigger={<a className="formButtons">Sign Up</a>}>
           <SignUpForm handleInput={this.props.handleInput} handleSignUp={this.props.handleSignUp}/>
         </Modal>)
       navBarItems.push(
-        <Modal header='Login' trigger={<a className="formButtons">Login</a>}>
+        <Modal header='Login' key={6} trigger={<a className="formButtons">Login</a>}>
           <LogInForm handleInput={this.props.handleInput} handleLogIn={this.props.handleLogIn} />
         </Modal>)
     }

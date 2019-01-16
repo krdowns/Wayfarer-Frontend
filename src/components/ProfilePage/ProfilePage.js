@@ -10,7 +10,7 @@ class ProfilePage extends Component {
     let editButton = []
     if (this.props.isLoggedIn) {
       editButton.push(
-        <Modal header='Edit Info' trigger={<a className="formButtons">Edit Info</a>}>
+        <Modal header='Edit Profile' key={10} trigger={<a className="formButtons">Edit Profile</a>}>
           <EditInfoForm />
         </Modal>)
     }
