@@ -64,7 +64,7 @@ class App extends Component {
 
   handleSignUp = (e) => {
     e.preventDefault()
-    axios.post('/users/signup', 
+    axios.post('https://desolate-reef-70929.herokuapp.com/users/signup', 
 			{ email: this.state.email,
         password: this.state.password,
         name: this.state.name,
@@ -89,7 +89,7 @@ class App extends Component {
 
   handleLogIn = (e) => {
     e.preventDefault()
-    axios.post('/users/login', {
+    axios.post('https://desolate-reef-70929.herokuapp.com/users/login', {
       email: this.state.email,
       password: this.state.password,
     })
