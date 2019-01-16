@@ -61,10 +61,10 @@ class App extends Component {
       [e.target.name]: e.target.value
     })
   }
-//http://localhost:3001/users/signup
+//https://whispering-beach-66155.herokuapp.com/users/signup
   handleSignUp = (e) => {
     e.preventDefault()
-    axios.post('https://whispering-beach-66155.herokuapp.com/users/signup', 
+    axios.post('http://localhost:3001/users/signup', 
 			{ email: this.state.email,
         password: this.state.password,
         name: this.state.name,
@@ -86,10 +86,10 @@ class App extends Component {
       .catch(err => console.log(err))
       
   }
-
+  // https://whispering-beach-66155.herokuapp.com/users/login
   handleLogIn = (e) => {
     e.preventDefault()
-    axios.post('https://whispering-beach-66155.herokuapp.com/users/login', {
+    axios.post('http://localhost:3001/users/signup', {
       email: this.state.email,
       password: this.state.password,
     })
